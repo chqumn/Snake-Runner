@@ -1,0 +1,226 @@
+@font-face {
+    font-family: 'bladeRunner';
+    src: url('D:/Snake/bladrmf_-webfont.woff2') format('woff2'),
+         url('D:/Snake/bladrmf_-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    -webkit-text-stroke: 0.02px rgb(66, 47, 144);
+    font-family: 'bladeRunner';
+    font-size: 40px;
+    color: rgb(230,12,19);
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+h2 {
+    font-family: 'bladeRunner';
+    font-size: 30px;
+    -webkit-text-stroke: 0.02px rgb(66, 47, 144);
+    color: rgb(197, 153, 188);
+}
+
+body {
+    background-image: url('D:/Snake/background.jpg');
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-size: 115%;
+}
+
+.title {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#board {
+    width: 400px;
+    height: 400px;
+    border: 5px solid rgb(68, 29, 75);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: linear-gradient(315deg, rgb(244, 11, 159), rgb(66, 47, 144));
+}
+
+.restart {
+    width: 800px;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#keys {
+    width: 600px;
+    padding: 5px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@keyframes glowing {
+    0% {
+        color: rgb(8,100,230);
+        border: 2px solid rgb(8,100,230);
+        box-shadow: 3px 3px 3px 0 rgb(8,100,230);
+    }
+    20% {
+        color: rgb(8,100,230);
+        border: 2px solid rgb(8,100,230);
+        box-shadow: 3px 3px 3px 0 rgb(8,100,230);
+    }
+    30% {
+        color: rgb(244, 11, 159);
+        border: 2px solid rgb(244, 11, 159);
+        box-shadow: 3px 3px 3px 0 rgb(244, 11, 159);
+    }
+    50% {
+        color: rgb(230,12,19);
+        border: 2px solid rgb(230,12,19);
+        box-shadow: 3px 3px 3px 0 rgb(230,12,19);
+    }
+    50% {
+        color: rgb(230,12,19);
+        border: 2px solid rgb(230,12,19);
+        box-shadow: 3px 3px 3px 0 rgb(230,12,19);
+    }
+    70% {
+        color: rgb(230,12,19);
+        border: 2px solid rgb(230,12,19);
+        box-shadow: 3px 3px 3px 0 rgb(230,12,19);
+    }
+    80% {
+        color: rgb(244, 11, 159);
+        border: 2px solid rgb(244, 11, 159);
+        box-shadow: 3px 3px 3px 0 rgb(244, 11, 159);
+    }
+    90% {
+        color: rgb(244, 11, 159);
+        border: 2px solid rgb(244, 11, 159);
+        box-shadow: 3px 3px 3px 0 rgb(244, 11, 159);
+    }
+    100% {
+        color: rgb(8,100,230);
+        border: 2px solid rgb(8,100,230);
+        box-shadow: 3px 3px 3px 0 rgb(8,100,230);
+    }
+  }
+
+  #newGame {
+    font-family: 'bladeRunner';
+    font-size: 20px;
+    padding: 7px;
+    width: 150px;
+    border-radius: 5px;
+    background: transparent;
+    transition-duration: 0.4s;
+    animation: glowing 5000ms infinite;
+}
+
+  #newGame:hover {
+    background-color: darkslateblue;
+    animation: glowing 2s infinite;
+}
+
+#left {
+    font-family: 'bladeRunner';
+    width: 70px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(244,11,159);
+    color: white;
+    border: 2px solid rgb(8,100,230);
+    box-shadow: 3px 3px 3px 0 rgb(8,100,230);
+    transition-duration: 0.4s;
+}
+
+#left:hover {
+    background-color: white;
+    color: rgb(244,11,159);
+}
+
+#up {
+    font-family: 'bladeRunner';
+    width: 70px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(244,11,159);
+    color: white;
+    border: 2px solid rgb(8,100,230);
+    box-shadow: 3px 3px 3px 0 rgb(8,100,230);
+    transition-duration: 0.4s;
+}
+
+#up:hover {
+    background-color: white;
+    color: rgb(244,11,159);
+}
+
+#down {
+    font-family: 'bladeRunner';
+    width: 70px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(244,11,159);
+    color: white;
+    border: 2px solid rgb(8,100,230);
+    box-shadow: 3px 3px 3px 0 rgb(8,100,230);
+    transition-duration: 0.4s;
+}
+
+#down:hover {
+    background-color: white;
+    color: rgb(244,11,159);
+}
+
+#right {
+    font-family: 'bladeRunner';
+    width: 70px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(244,11,159);
+    color: white;
+    border: 2px solid rgb(8,100,230);
+    box-shadow: 3px 3px 3px 0 rgb(8,100,230);
+    transition-duration: 0.4s;
+}
+
+#right:hover {
+    background-color: white;
+    color: rgb(244,11,159);
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    box-shadow: 0.2px 0.2px 0.5px black, 0 0 1px rgb(68, 29, 75), 0 0 1.5px rgb(46, 19, 51);
+}
+
+.snakeChunk {
+    background-image: url('D:/Snake/chunk2.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.snakeHead {
+    background-image: url('D:/Snake/head2.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.food {
+    background-image: url('D:/Snake/prey.png');
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#score_panel {
+    display: none;
+}
+
+#keys {
+    display: none;
+}
